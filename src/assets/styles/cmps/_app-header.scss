@@ -1,13 +1,23 @@
 .app-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 5vh;
+    height: 80px;
 
-    .links {
-        gap: 10px;
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50px;
+
+        img {
+            object-fit: contain;
+        }
+
+        .logo-name {
+            margin-bottom: 0;
+        }
     }
 
-    background-color: lightblue;
-    padding: 10px;
+    background-color: $clr2;
+    padding: 1rem;
 }
