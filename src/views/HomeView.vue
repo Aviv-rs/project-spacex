@@ -1,7 +1,17 @@
-<template></template>
+<template>
+  <section class="home-page">
+    <LandingList :landings="landings" />
+  </section>
+</template>
 
 <script>
-export default {};
+import LandingList from '../components/LandingList.vue'
+
+export default {
+  components: {
+    LandingList,
+  },
+}
 </script>
 
 <style></style>

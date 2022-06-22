@@ -1,7 +1,7 @@
 <template>
-  <main class="app">
-    <RouterView />
-  </main>
+  <section class="landing-details">
+    <h1>Hello details</h1>
+  </section>
 </template>
 
 <script>

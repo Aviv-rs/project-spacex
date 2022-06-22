@@ -1,0 +1,13 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+
+    .links {
+        gap: 10px;
+    }
+
+    background-color: lightblue;
+    padding: 10px;
+}

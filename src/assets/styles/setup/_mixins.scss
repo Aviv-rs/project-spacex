@@ -1,0 +1,20 @@
+@mixin styled-link($padding: 1em 1.5em) {
+    background-color: $clr4;
+    box-shadow: 0 5px 0 darken($clr4, 10%);
+    color: white;
+    padding: $padding;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+    &:hover {
+        background-color: lighten($clr4, 5%);
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: none;
+        top: 5px;
+    }
+}
