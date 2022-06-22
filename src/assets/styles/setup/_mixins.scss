@@ -1,6 +1,6 @@
 @mixin styled-link($padding: 1em 1.5em) {
-    background-color: $clr4;
-    box-shadow: 0 5px 0 darken($clr4, 10%);
+    background-color: $clr5;
+    box-shadow: 0 5px 0 darken($clr5, 10%);
     color: white;
     padding: $padding;
     position: relative;
@@ -9,7 +9,7 @@
 
 
     &:hover {
-        background-color: lighten($clr4, 5%);
+        background-color: lighten($clr5, 5%);
         cursor: pointer;
     }
 
