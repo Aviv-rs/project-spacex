@@ -18,7 +18,12 @@ async function query(filterBy = {}, pageIdx = 0) {
         syncStorageService.saveToStorage(KEY, landings)
     }
 
-    if (filterBy.status) landings = landings.filter(landing => landing.status === filterBy.status)
+    if (filterBy.status && filterBy.status !== 'all') {
+        landings = landings.filter(landing =>
+            (landing.success && filterBy.status === 'success') ||
+            (!landing.success && filterBy.status === 'failed'))
+    }
+
     landings = landings.slice(pageIdx, pageIdx + PAGE_SIZE)
     return landings
 }
