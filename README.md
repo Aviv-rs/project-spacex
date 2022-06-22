@@ -1,3 +1,3 @@
 # Project SpaceX
 
-This project features various landings from the spaceX data api
+This project is a home assignment simulation done in 4.5 hours featuring various landings from the spaceX data api

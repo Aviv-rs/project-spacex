@@ -1,6 +1,6 @@
 <template>
   <section class="home-page main-layout">
-    <!-- <LandingFilter @filter="onFilter" /> -->
+    <LandingFilter @filter="onFilter" />
     <LandingList v-if="landings" :landings="landings" />
   </section>
 </template>
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     async onFilter(filterBy) {
-      this.contacts = await landingService.query(filterBy)
+      this.landings = await landingService.query(filterBy)
     },
   },
   async created() {

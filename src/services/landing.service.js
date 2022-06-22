@@ -18,13 +18,14 @@ async function query(filterBy = {}, pageIdx = 0) {
         syncStorageService.saveToStorage(KEY, landings)
     }
 
+    landings = landings.slice(pageIdx, pageIdx + PAGE_SIZE)
     if (filterBy.status && filterBy.status !== 'all') {
-        landings = landings.filter(landing =>
-            (landing.success && filterBy.status === 'success') ||
-            (!landing.success && filterBy.status === 'failed'))
+        landings = landings.filter(landing => {
+            return (landing.success !== undefined) && (landing.success && filterBy.status === 'success') ||
+                (!landing.success && filterBy.status === 'failed')
+        })
     }
 
-    landings = landings.slice(pageIdx, pageIdx + PAGE_SIZE)
     return landings
 }
 
