@@ -1,0 +1,12 @@
+.landing-details {
+    .landing-img-container {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+
+        img {
+
+            object-fit: contain;
+        }
+    }
+}

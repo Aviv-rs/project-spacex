@@ -3,7 +3,7 @@ import { asyncStorageService } from "./asyncStorageService"
 import { syncStorageService } from "./syncStorageService"
 
 export const landingService = {
-    query
+    query, getById
 }
 
 const KEY = 'landing_db'
@@ -21,4 +21,8 @@ async function query(filterBy = {}, pageIdx = 0) {
     if (filterBy.status) landings = landings.filter(landing => landing.status === filterBy.status)
     landings = landings.slice(pageIdx, pageIdx + PAGE_SIZE)
     return landings
+}
+
+async function getById(landingId) {
+    return await asyncStorageService.get(KEY, landingId)
 }
