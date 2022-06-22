@@ -1,7 +1,9 @@
 <template>
   <RouterLink :to="`/landing/${landing._id}`">
     <article className="landing-preview flex align-center">
-      <!-- TODO: render landing info -->
+      <div class="landing-img-container">
+        <!-- <img :src="" alt=""> -->
+      </div>
     </article>
   </RouterLink>
 </template>

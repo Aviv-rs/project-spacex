@@ -3,7 +3,7 @@
     <TransitionGroup name="list">
       <LandingPreview
         v-for="landing in landings"
-        :key="landing._id"
+        :key="landing.id"
         :landing="landing"
       />
     </TransitionGroup>
