@@ -1,5 +1,5 @@
 <template>
-  <section class="home-page">
+  <section class="home-page main-layout">
     <LandingList v-if="landings" :landings="landings" />
   </section>
 </template>
